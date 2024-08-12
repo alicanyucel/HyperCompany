@@ -21,6 +21,7 @@
     "@ngrx/store": "^16.3.0",
     "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0",
+    "jwt-decode": "^4.0.0",
     "rxjs": "~7.8.0",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.12.4",
