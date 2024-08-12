@@ -1,4 +1,4 @@
-import { ErrorHandler, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { SwalService } from './swal.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
