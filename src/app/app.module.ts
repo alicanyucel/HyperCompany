@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from 'src/components/footer/footer.component';
 import { HeaderComponent } from 'src/components/header/header.component';
 import { NotFoundComponent } from 'src/components/not-found/not-found.component';
+import { CommonInterceptor } from 'src/interceptor/common.interceptor';
 const routes: Routes = [
 
   {
@@ -39,7 +40,9 @@ const routes: Routes = [
     }),
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
