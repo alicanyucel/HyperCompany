@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from 'src/components/footer/footer.component';
+import { HeaderComponent } from 'src/components/header/header.component';
 const routes: Routes = [
  
    {
@@ -17,7 +18,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
