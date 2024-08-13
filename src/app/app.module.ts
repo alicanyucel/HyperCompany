@@ -10,6 +10,10 @@ import { FooterComponent } from 'src/components/footer/footer.component';
 import { HeaderComponent } from 'src/components/header/header.component';
 import { NotFoundComponent } from 'src/components/not-found/not-found.component';
 import { CommonInterceptor } from 'src/interceptor/common.interceptor';
+import { BusPipe } from 'src/pipe/bus.pipe';
+import { CarPipe } from 'src/pipe/car.pipe';
+import { BoatPipe } from 'src/pipe/boat.pipe';
+import { CommonModule } from '@angular/common';
 const routes: Routes = [
 
   {
@@ -26,13 +30,17 @@ const routes: Routes = [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BusPipe,
+    CarPipe,
+    BoatPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
       closeButton: true,
