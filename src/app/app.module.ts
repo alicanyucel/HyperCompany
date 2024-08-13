@@ -8,18 +8,24 @@ import { ToastrModule } from 'ngx-toastr';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from 'src/components/footer/footer.component';
 import { HeaderComponent } from 'src/components/header/header.component';
+import { NotFoundComponent } from 'src/components/not-found/not-found.component';
 const routes: Routes = [
- 
-   {
+
+  {
     path: "footer",
     component: FooterComponent
+  },
+  {
+    path: "**",
+    component: NotFoundComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
