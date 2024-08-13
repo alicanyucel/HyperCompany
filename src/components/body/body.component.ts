@@ -29,7 +29,7 @@ export class BodyComponent {
   }
   add(form: NgForm) {
     if (form.valid) {
-      this.http.post<string>("Doctors/Create", this.createModelbus, (res) => {
+      this.http.post<string>("Buses/Create", this.createModelbus, (res) => {
         console.log(res);
         this.getAll();
         this.addModalCloseBtn?.nativeElement.click();
@@ -40,6 +40,7 @@ export class BodyComponent {
   getAll() {
     this.http.post<Bus[]>("Buses/GetAll", {}, (res) => {
       this.buses = res.data;
+      console.log(this.buses);
     });
   }
   delete(id: string, fullName: string) {
