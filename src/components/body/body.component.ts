@@ -43,7 +43,7 @@ export class BodyComponent {
       console.log(this.buses);
     });
   }
-  delete(id: string, fullName: string) {
+  delete(id: string) {
     this.swall.calSwal("Delete bus?", `You want to delete?`, () => {
       this.http.post<string>("Buses/DeleteById", { id: id }, (res) => {
         this.swall.callToast(res.data, "info");
